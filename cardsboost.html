@@ -11,25 +11,52 @@
             margin-left: 10px; /* Espacio entre los botones */          
         }
 
-        .text-title {
-          background-color: rgb(158, 154, 154);
-          text-align: center;
-          border-top: 20px solid blue;
-          border-bottom: 20px solid blue;
-        }   
+        /*animacion titulo*/
+          .text-title {
+            background-color: rgb(158, 154, 154);
+            text-align: center;
+            border-top: 20px solid blue;
+            border-bottom: 20px solid blue;
+            overflow: hidden; /* Oculta el texto que desborda el contenedor */
+            white-space: nowrap; /* Evita el retorno de línea */
+            animation: slideIn 2s ease-in-out; /* Duración y efecto de entrada */
+            font-family: fantasy;
+          }   
+
+                @keyframes slideIn {
+              0% {
+                  transform: translateX(-100%);
+              }
+              100% {
+                  transform: translateX(0);
+              }
+          }
+
+
+
+
+
+
         .card {
-    border-width: 6px;
+    border-width: 8px;
     margin-top: 2cm;
     box-shadow: 14px 12px 10px;
-    animation: borderGlow 3s infinite; /* 3s es la duración de la animación, puedes ajustarlo según tus preferencias */
+    animation: borderGlow 6s infinite; 
 }
 
-        @keyframes borderGlow {
+/*contorno con colores*/
+@keyframes borderGlow {
     0% {
         border-color: blue;
     }
+    25% {
+        border-color: #007bff; /* Primer color */
+    }
     50% {
-        border-color: #007bff; /* Cambia a otro tono de azul o el color que prefieras */
+        border-color: #00ccff; /* Segundo color */
+    }
+    75% {
+        border-color: #750eb9; /* Tercer color */
     }
     100% {
         border-color: blue;
@@ -68,9 +95,9 @@
                     <img src="C:\Users\FABRICIO\Documents\COM23554\boostpractice\f1rbull.jpg" class="card-img-top" alt="f1 23">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">RED BULL</h5>
-                        <p class="card-text">Aerodinámica líder: Red Bull destaca en aerodinámica.
-                          Pilotos estrella: Cuentan con Max Verstappen y otros.
-                          Tecnología innovadora: Líderes en soluciones tecnológicas.</p>
+                        <p class="card-text">Red Bull Racing destaca en aerodinámica, lo que se traduce en un rendimiento excepcional en la pista. 
+                          Su enfoque en el diseño aerodinámico preciso y eficiente es clave para su éxito.
+                          El equipo cuenta con pilotos de élite como Max Verstappen, cuyo talento y pasión son fundamentales para lograr resultados sobresalientes.</p>
                         <!-- Botones centrados en la parte inferior -->
                         <div class="mt-auto text-center">
                           <button class="btn btn-primary">historia</button>
@@ -86,7 +113,7 @@
                     <img src="C:\Users\FABRICIO\Documents\COM23554\boostpractice\f1mercedes.jpg" class="card-img-top" alt="f1 23">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">MERCEDES</h5>
-                        <p class="card-text">Dominio Tecnológico: Mercedes es líder en tecnología, destacándose en motores y aerodinámica.
+                        <p class="card-text">Mercedes es líder en tecnología, destacándose en motores y aerodinámica.
                           Pilotos de Élite: Pilotos como Lewis Hamilton han llevado al equipo a numerosos campeonatos.                          
                           Excelencia en Estrategia: Son conocidos por su habilidad estratégica y desarrollo constante del coche, manteniendo un rendimiento consistente.</p>
                         <!-- Botones centrados en la parte inferior -->
